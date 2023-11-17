@@ -10,14 +10,24 @@ Team Member(s) contribution:
 # ---------------------------- main.py - ---------------------------
 from traveller import Traveller
 
-travellers_list = []
+class Holidays:
+    def __init__(self):
+        self.traveller_instance = Traveller(name="", dob="", passport_no="", phone_no="")
+        self.traveller_list = []
 
-# Create an instance of the Traveller class
-traveller_instance = Traveller(name="", dob="", passport_no="", phone_no="")
+    def obtain_details(self):
+        self.traveller_instance.obtainDetails(self.traveller_list)
 
-# Obtain details and add to the list
-traveller_instance.obtainDetails(travellers_list)
+    def print_details(self):
+        self.traveller_instance.printDetails(self.traveller_list)
 
-# Print details from the list
-traveller_instance.printDetails(travellers_list)
+    def calc_total_cost(self):
+        pass
+
+
+holidays_instance = Holidays()
+holidays_instance.obtain_details()
+holidays_instance.print_details()
+
+
 
