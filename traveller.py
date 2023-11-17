@@ -22,7 +22,7 @@ class Traveller:
 
     def get_phone_no(self):
         return self._phone_no
-    
+
     # Check if input has any special characters
     def has_special_characters(self, input_string):
         special_characters = "!`¬£$%^&*()-_=+[]{}#~'@;:/?><.,|"

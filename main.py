@@ -20,10 +20,18 @@ class HolidayBooking:
         self.car_hires = []
 
     def obtain_details(self):
-        pass
+        # Create an instance of the Traveller class
+        traveller_instance = Traveller(name="", dob="", passport_no="", phone_no="")
+        traveller_instance.obtainDetails(self.travellers)
 
     def print_details(self):
-        pass
+        print("--------------- Traveller Details ---------------")
+        for traveller in self.travellers:
+            print("Name: ", traveller.get_name())
+            print("Date of Birth: ", traveller.get_dob())
+            print("Passport Number: ", traveller.get_passport_no())
+            print("Phone Number: ", traveller.get_phone_no())
+            print("------------------------------------------")
 
     def calc_total_cost(self):
         pass
