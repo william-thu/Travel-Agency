@@ -29,5 +29,8 @@ holidays_instance = Holidays()
 holidays_instance.obtain_details()
 holidays_instance.print_details()
 
+# print("--------------- Holiday Booked! ---------------")
+# print("Total cost of holiday: £" + str(total_cost))
+
 
 
