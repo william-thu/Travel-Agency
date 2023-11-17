@@ -100,6 +100,18 @@ class Traveller:
             phone_no = input("Enter Phone No.: ")
         self._phone_no = phone_no
 
+    def set_passport(self, initial_passport):
+        valid_passport = False
+        passport_no = initial_passport
+        while not valid_passport:
+            if self.has_special_characters(passport_no):
+                print("Passport cannot contain special characters.")
+            else:
+                valid_passport = True
+                break
+            passport_no = input("Enter Passport: ")
+        self._passport_no = passport_no
+
     def obtainDetails(self, travellers):
         print("-------------- You are now booking for a Holiday! --------------")
         more_travellers = True
@@ -107,14 +119,7 @@ class Traveller:
             self.set_name(input("Enter traveller's name: "))
             self.set_dob(input("Enter Date of Birth (dd/mm/yyyy) - Month must be 3-letters abbreviated (e.g.: 07/Mar/2002): "))
             self.set_phone_no(input("Enter Phone No.: "))
-
-            # Obtain Traveller's Passport
-            while valid_passport == False:
-                passportNo = input("Enter passport number: ")
-                if self.has_special_characters(passportNo):
-                    print("Passport cannot contain special characters.")
-                else:
-                    valid_passport = True
+            self.set_passport(input("Enter Passport: "))
 
             traveller = {
                 "Name": self._name,
