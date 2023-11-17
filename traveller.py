@@ -151,23 +151,16 @@ class Traveller:
                 else:
                     print("Invalid response. Please enter 'yes' or 'no'.")
 
+    def print_traveller_details(self, traveller):
+        print("Name: ", traveller.get("Name"))
+        print("Date of Birth: ", traveller.get("Date of Birth"))
+        print("Passport Number: ", traveller.get("Passport Number"))
+        print("Phone Number: ", traveller.get("Phone Number"))
+        print("------------------------------------------")
+
     def printDetails(self, travellers):
         print("--------------- Traveller Details ---------------")
         for traveller in travellers:
-            print("Name: ", traveller["Name"])
-            print("Date of Birth: ", traveller["Date of Birth"])
-            print("Passport Number: ", traveller["Passport Number"])
-            print("Phone Number: ", traveller["Phone Number"])
-            print("------------------------------------------")
+            self.print_traveller_details(traveller)
 
 
-travellers_list = []
-
-# Create an instance of the Traveller class
-traveller_instance = Traveller(name="", dob="", passport_no="", phone_no="")
-
-# Obtain details and add to the list
-traveller_instance.obtainDetails(travellers_list)
-
-# Print details from the list
-traveller_instance.printDetails(travellers_list)
