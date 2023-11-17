@@ -26,11 +26,14 @@ class HolidayBooking:
         pass
 
     def calc_total_cost(self):
-        pass
+        
 
     def book_holiday(self):
+        self.obtain_details()
+        self.print_details()
+        total_cost = self.calc_total_cost()
         print("--------------- Holiday Booked! ---------------")
-        print("Total cost of holiday: £")
+        print("Total cost of holiday: £" + str(total_cost))
 
 
 
