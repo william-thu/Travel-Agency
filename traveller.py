@@ -11,6 +11,18 @@ class Traveller:
         self._passport_no = passport_no
         self._phone_no = phone_no
 
+    def get_name(self):
+        return self._name
+
+    def get_dob(self):
+        return self._dob
+
+    def get_passport_no(self):
+        return self._passport_no
+
+    def get_phone_no(self):
+        return self._phone_no
+    
     # Check if input has any special characters
     def has_special_characters(self, input_string):
         special_characters = "!`¬£$%^&*()-_=+[]{}#~'@;:/?><.,|"
