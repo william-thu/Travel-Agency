@@ -8,7 +8,7 @@ Team Member(s) contribution:
 """
 
 # ---------------------------- main.py - ---------------------------
-import traveller
+from traveller import Traveller
 import hotel
 import flight
 import car_hire
@@ -26,7 +26,7 @@ class HolidayBooking:
         pass
 
     def calc_total_cost(self):
-        
+        pass
 
     def book_holiday(self):
         self.obtain_details()
