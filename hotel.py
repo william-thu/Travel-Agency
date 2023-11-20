@@ -124,7 +124,7 @@ class Hotel:
             self._hotels.append(self._hotel_details)
 
     def get_cost(self):
-      return self._cost_input
+      return float(self._cost_input)
 
 
     def print(self):

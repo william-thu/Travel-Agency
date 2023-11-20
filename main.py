@@ -2,7 +2,7 @@
 ---------------------------------------------------
 Team Member(s) contribution:
 
-- William: set up main.py (Holidays class, methods and new holiday instance)
+- William: set up main.py (Holidays class, methods and new holiday instance), holiday iteration, calc holiday cost
 -Zhen Yang: participated in writing main.py
 - Aigerim: added needed hotel class codes
 ---------------------------------------------------
@@ -20,8 +20,6 @@ class Holidays:
         self._hotels = []
         self.hotel_instance = Hotel(self._hotels)
 
-        # depending on how you implemented it, put your own lists here
-
     # method to obtain details
     def obtain_details(self):
         self.traveller_instance.obtainDetails(self.traveller_list)
@@ -30,6 +28,7 @@ class Holidays:
         for item in flight.lst:
             item.show()
         flight_cost = flight.getTotalCost(flight.lst2)
+
     # method to print details
     def print_details(self):
         self.traveller_instance.printDetails(self.traveller_list)
@@ -37,9 +36,9 @@ class Holidays:
 
     # method to calculate total cost of holiday
     def calc_total_cost(self):
-        pass
-        #just add my hotel's cost to other costs
-        self.hotel_instance.get_cost()
+        total_cost = 0
+        total_cost = total_cost + flight.getTotalCost(flight.lst2) + self.hotel_instance.get_cost()
+        return total_cost
 
 #Obtain the flight module and calculate flight.cost
 
@@ -50,12 +49,17 @@ class Holidays:
 total_cost = 0
 total_cost = total_cost + flight_cost
 '''
+
 # please do not touch
 while True:
     holidays_instance = Holidays()
     holidays_instance.obtain_details()
     holidays_instance.print_details()
+    total_cost = holidays_instance.calc_total_cost()
+
     print("--------------- Holiday Booked! ---------------")
+    print("Total cost of holiday: £" + str(total_cost))
+
     response = input("Do you want to book another holiday? (yes / no): ").lower()
     if response == "no":
         print("Thank you for booking! Have a great holiday.")

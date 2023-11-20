@@ -142,19 +142,19 @@ class Traveller:
 
             travellers.append(traveller)
             print("-------------- Traveller details noted! --------------")
-            print("-------------- Now entering hotel details --------------")
-            more_travellers = False
-            '''  
+
+
             while True:
                 response = input("Do you want to enter another traveller information? (yes / no): ").lower()
                 if response == "yes":
                     break
                 elif response == "no":
                     more_travellers = False
+                    print("-------------- Now entering hotel details --------------")
                     break
                 else:
                     print("Invalid response. Please enter 'yes' or 'no'.")
-            '''
+
 
     def print_traveller_details(self, traveller):
         print("Name: ", traveller.get("Name"))
