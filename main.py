@@ -43,7 +43,7 @@ class Holidays:
 
 #Obtain the flight module and calculate flight.cost
 
-
+# print("Total cost of holiday: £" + str(total_cost))
 
 
 '''
@@ -55,11 +55,14 @@ while True:
     holidays_instance = Holidays()
     holidays_instance.obtain_details()
     holidays_instance.print_details()
-
+    print("--------------- Holiday Booked! ---------------")
     response = input("Do you want to book another holiday? (yes / no): ").lower()
-    if response != "yes":
+    if response == "no":
         print("Thank you for booking! Have a great holiday.")
         break
-# print("--------------- Holiday Booked! ---------------")
-# print("Total cost of holiday: £" + str(total_cost))
+    elif response == "yes":
+      pass
+    else:
+      print("Invalid input.")
+
 

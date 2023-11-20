@@ -141,6 +141,8 @@ class Traveller:
             }
 
             travellers.append(traveller)
+            print("-------------- Traveller details noted! --------------")
+            print("-------------- Now entering hotel details --------------")
             more_travellers = False
             '''  
             while True:
